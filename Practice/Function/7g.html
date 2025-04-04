@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertLength(length, from, to)
+        {
+            const conversionFactor = 1.6;
+            if(from === to)
+        {
+            return `${length} ${to}`;
+        }
+        if (from ==='miles' && to === 'km')
+        {
+            return `${(length * conversionFactor).toFixed(2)} km`;
+        }
+        else if(from === 'km' && to ==='miles')
+        {
+            return `${(length / conversionFactor).toFixed(2)} miles`;
+        }
+        else{
+            return "Invalid unit! 'miles' or 'km'.";
+        }
+        }
+        console.log(convertLength(50, 'miles', 'km'))
+        console.log(convertLength(32, 'km', 'miles'))
+        console.log(convertLength(50, 'km', 'km'))
+
+    </script>
+</body>
+</html>

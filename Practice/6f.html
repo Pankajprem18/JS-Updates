@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-statements</title>
+</head>
+<body>
+    <p>Flip coin</p>
+    <button class="Head"
+    onclick="
+        const num = Math.random();
+        let result = ' ';
+        
+     if(num<.5)
+    {
+        result = 'Head'
+    }
+    else{
+        result = 'Tail';
+    }
+    let guess = ' ';
+    if(result === 'Head')
+    {
+        guess = 'win'
+    }
+    else if(result ==='Tail') 
+    {
+        guess = 'lose'
+    }
+    alert(`you choose Head and computer give ${result} so, now you ${guess}`);
+    "
+    >Head</button>
+
+    <button class="Tail"
+     onclick="
+     const num = Math.random();
+    let result = ' ';
+    if(num<.5)
+    {
+        result = 'Head'
+    }
+    else{
+        result = 'Tail';
+    }
+
+    let guess = ' ';
+    if(result === 'Head')
+    {
+        guess = 'lose'
+    }
+    else if(result ==='Tail') 
+    {
+        guess = 'win'
+    }
+    alert(`you choose Tail and computer give ${result} so, now you ${guess}`);
+    "
+    >
+        Tail
+    </button>
+    <script>
+    
+    </script>
+</body>
+</html>

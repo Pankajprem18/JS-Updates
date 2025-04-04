@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-statement</title>
+</head>
+<body>
+    <script>
+        const currentHour = new Date().getHours();
+        let timeMessage = ' ';
+        let name = 'Pankaj';
+        if(currentHour>=6 && currentHour<12)
+        {
+         timeMessage = `Good morning! ${name}`;
+        }
+        else if(currentHour >=12 && currentHour<18)
+        {
+            timeMessage = `Good afternoon!${name}`;
+        }
+        else {
+        timeMessage = `Good evening! ${name}`;
+        }
+        console.log(`The current time is ${currentHour} so ${timeMessage}`);
+    </script>
+</body>
+</html>
+ 
