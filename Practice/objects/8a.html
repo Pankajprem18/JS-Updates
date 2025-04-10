@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects practice</title>
+</head>
+
+<body>
+    <script>
+        const basketball = {
+            price: 2095,
+            'delivery-time': '3 days',
+            // function inside the object
+
+            comparePrice: function (product1, product2) {
+                if (product1.price < product2.price) {
+                    return product1;
+                }
+                else {
+                    return product2;
+                }
+            }
+
+
+        };
+        console.log(basketball.price);
+        console.log(basketball['delivery-time'])
+
+        // Increase price by 500 cents
+        basketball.price += 500;
+
+        // Display updated object in the console.
+        console.log(basketball.price);
+
+        // two product object
+        const product1 = {
+            name: "Backpack",
+            price: 2599
+        }
+        const product2 = {
+            name: "Water Bottle",
+            price: 1599
+        }
+         const cheaperProduct = basketball.comparePrice(product1, product2);
+         console.log("Cheaper product:", cheaperProduct);
+    </script>
+</body>
+
+</html>
+<!-- create a funtion 'comparePrice(product1, product2)' which takes 2 products ( with 'name' and 'price' properties) and
+returns the product that is less expensive. Create 2 products and try out the function -->
