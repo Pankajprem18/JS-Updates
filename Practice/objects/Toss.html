@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Coin</title>
+</head>
+
+<body>
+    <button onclick="playGame('Head');">Head</button>
+    <button onclick="playGame('Tail');">Tail</button>
+    <script>
+        function playGame(playerGuess) {
+            const computerPlay = pickComputerPlay()
+            let result = ' ';
+
+            if (playerGuess === 'Head') {
+                if (computerPlay === 'Head') {
+                    result = 'You win.'
+                }
+                else if (computerPlay === 'Tail') {
+                    result = 'You lose.'
+                }
+            }
+            if (playerGuess === 'Tail') {
+                if (computerPlay === 'Head') {
+                    result = 'You lose.'
+                }
+                else if (computerPlay === 'Tail') {
+                    result = 'You win.'
+                }
+            }
+             alert(`You picked ${playerGuess}, Computer picked ${computerPlay}. you ${result}` );
+        }
+
+        function pickComputerPlay() {
+            const pickRandom = Math.random()
+            let computerPlay = ' ';
+
+            if (pickRandom >= 0 && pickRandom < 1 / 2) {
+                computerPlay = 'Head';
+            }
+            else if (pickRandom >= 1 / 2 && pickRandom < 1) {
+                computerPlay = 'Tail'
+            }
+            return computerPlay;
+        }
+    </script>
+</body>
+
+</html>

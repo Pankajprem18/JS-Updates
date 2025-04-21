@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
     <script>
         const basketball = {
             price: 2095,
@@ -21,8 +22,16 @@
                 else {
                     return product2;
                 }
-            }
+            },
 
+            isSameProduct: function (product1, product2) {
+                if (product1.name === product2.name && product1.price === product2.price) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
 
         };
         console.log(basketball.price);
@@ -43,12 +52,14 @@
             name: "Water Bottle",
             price: 1599
         }
-         const cheaperProduct = basketball.comparePrice(product1, product2);
-         console.log("Cheaper product:", cheaperProduct);
+        const cheaperProduct = basketball.comparePrice(product1, product2);
+        const prodMatch = basketball.isSameProduct(product1, product2);
+
+        console.log("Cheaper product:", cheaperProduct);
+        console.log(prodMatch);
+
     </script>
 </body>
 
 </html>
-
-
 
