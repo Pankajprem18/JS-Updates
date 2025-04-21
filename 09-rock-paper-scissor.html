@@ -37,6 +37,7 @@
         score.ties = 0;
         localStorage.removeItem('score');
         updateScoreElement();
+
     ">
         Reset Score
     </button>
@@ -50,8 +51,6 @@
          };
 
          updateScoreElement();
-         
-
 
         /* if(!score)
          {
@@ -133,11 +132,10 @@
             document.querySelector('.js-moves')
             .innerHTML = `You ${playerMove} - Computer ${computerMove}`;
 
-            updateMoveElement();
+            // updateMoveElement();
 
             // alert(`You picked ${playerMove}, Computer picked ${computerMove}. ${result} Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
-        }
-
+        } 
 
         function updateScoreElement()
         {
