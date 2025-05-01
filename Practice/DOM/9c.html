@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head & Tails</title>
+</head>
+
+<body>
+    <button  onclick=" chooseButton('Heads')
+        ">Heads</button>
+    <button  onclick=" chooseButton('Tails')
+    ">Tails</button>
+    <p class="playerButton"></p>
+    <script>
+
+        function chooseButton(choice) {
+            document.querySelector('.playerButton').innerHTML = `You chose: ${choice}`
+        }
+    </script>
+</body>
+</html>
+
