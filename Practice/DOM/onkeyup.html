@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onkeyup</title>
+</head>
+
+<body>
+    <input placeholder="on-live-key" onkeyup="keyUp()" class="js-key-up">
+    <p id="result"></p>
+
+    <script>
+
+        function keyUp() {
+            const inputEle = document.querySelector('.js-key-up');
+            document.getElementById("result").innerHTML = inputEle.value;
+        }
+    </script>
+
+</body>
+
+</html>
