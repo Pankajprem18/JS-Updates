@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array and loops</title>
+</head>
+
+<body>
+
+    <script>
+        // create an array
+        const nums = [10, 20, 30];
+        console.log(nums);
+
+        // allocate the array element
+        console.log(nums[2]);
+
+        // replace the array element
+        nums[2] = 99;
+        console.log(nums)
+
+        // print the last value
+        function getLastValue(array) {
+            let lastIndex = array.length - 1;
+            return array[lastIndex];
+        }
+        let result = getLastValue([1, 20, 22, 24, 5]);
+        console.log(result);
+
+        // swap the last and first number
+        function arraySwap(array) {
+            let temp = array[0];
+            array[0] = array[array.length - 1];
+            array[array.length - 1] = temp;
+            return array
+        }
+        let result1 = arraySwap([1, 20, 22, 24, 5]);
+        console.log(result1);
+
+        // count up by two using for loop
+
+        for (let i = 0; i <= 10; i += 2) {
+            console.log(i);
+        }
+
+        // for loops that couts  down from 5 to 0.
+        for(let i=5; i>=0; i--)
+        {
+            console.log(i);
+        }
+        //  print a number using while loop
+        let i = 0;
+        while(i<=10)
+        {
+            console.log(i);
+            i +=2;
+        }
+        // 
+        const num = [1, 2, 3];
+        for(let i = 0; i<=num.length-1; i++)
+        {
+        console.log(num[i]+1);
+           
+        }
+    </script>
+</body>
+
+</html>
