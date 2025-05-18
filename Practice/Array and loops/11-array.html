@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-Exercises-arrays and loops</title>
+</head>
+
+<body>
+    <script>
+        // check string is in the array or not
+        const firstArray = ['hello', 'world', 'search', 'good'];
+        let found = false;
+        for (let i = 0; i < firstArray.length; i++) {
+            if (firstArray[i] === 'searc') {
+                console.log(i);
+                found = true;
+            }
+        }
+        if (!found) {
+            console.log(-1);
+        }
+
+        // string values in multiples times
+        const firstArray1 = ['hello', 'world', 'search', 'search'];
+        let found1 = false;
+        for (let i = 0; i < firstArray.length; i++) {
+            if (firstArray[i] === 'search') {
+                console.log(i);
+                found1 = true;
+                break;
+            }
+        }
+        if (!found1) {
+            console.log(-1);
+
+        }
+
+        function findIndex(array, word) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === word) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        console.log(findIndex(['green', 'red', 'blue'], 'red'));
+        console.log(findIndex(['green', 'red', 'blue'], 'yellow'));
+
+        // If in array then remove from the array
+        function removeEgg(foods) {
+            let result = [];
+            for (let i = 0; i < foods.length; i++) {
+                if (foods[i] === 'egg') {
+                    continue;
+                }
+                result.push(foods[i])
+            }
+            return result;
+        }
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+        // Remove the first 2 'egg' from the array
+
+        function removeTwoEgg(foods) {
+            let result = [];
+            let eggCount = 0;
+            for (let i = 0; i < foods.length; i++) {
+                if (foods[i] === 'egg' && eggCount < 2) {
+                    eggCount++;
+                    continue
+                }
+                result.push(foods[i]);
+            }
+            return result;
+        }
+        console.log(removeTwoEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+        //  remove last 2 eggs from the array.
+
+        function removeLastTwoEgg(foods) {
+            let result = [];
+            let countEgg = 0;
+
+            let reversed = foods.slice().reverse();
+
+            for (let i = 0; i < reversed.length; i++) {
+                if (reversed[i] === 'egg' && countEgg < 2) {
+                    countEgg++;
+                    continue;
+                }
+                result.push(reversed[i]);
+            }
+            return result.reverse();
+        }
+        console.log(removeTwoEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+        // create a loop and display Fizz and Buzz problem accordingly
+        
+        for (let i = 1; i <= 20; i++) {
+           
+            if (i % 3 === 0) {
+                console.log('fizz');
+
+            }
+            else if (i % 5 === 0) {
+                console.log('Buzz')
+            }
+            else if (i % 3 === 0 && i % 5 === 0) {
+                console.log('FizzBuzz')
+            }
+            else{
+                console.log(i);
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
