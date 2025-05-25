@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Play button</title>
+</head>
+
+<body>
+    <button id="js_play_btn">Start</button>
+    <button id="js_add_cart">Add to cart</button>
+    <p id="message"></p>
+
+    <script>
+        const button = document.getElementById('js_play_btn');
+
+        button.addEventListener('click', function () {
+            if (button.textContent === 'Start') {
+                button.textContent = 'Loading...';
+
+                setTimeout(function () {
+                    button.textContent = 'Finished!';
+                }, 2000);
+                
+            }
+            else if (button.textContent === 'Finished!') {
+                button.textContent = 'Resetting...'; // Optional: show intermediate state
+
+                setTimeout(function () {
+                    button.textContent = 'Start';
+                }, 2000);
+            }s
+        });
+
+
+        const cartbtn = document.getElementById('js_add_cart');
+        const message = document.getElementById('message');
+        cartbtn.addEventListener('click', function () {
+            message.textContent = 'Added';
+
+            setTimeout(function () {
+                message.textContent = '';
+            }, 2000)
+        });
+
+
+    </script>
+</body>
+
+</html>
