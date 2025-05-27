@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+
+<body>
+    <script>
+        // arrow funtion multiplies them, together, and returns the results
+        const multiply = (a, b) => {
+            return a * b;
+        };
+        console.log(multiply(2, 3));
+        console.log(multiply(7, 10));
+
+        // write a function on one line
+        const multi = (b, c) => b * c;
+        console.log(multi(2, 3));
+        console.log(multi(7, 10));
+
+        //create a funtion using .forEach() instead of a loop.
+        function countPositive(nums) {
+            let counts = 0;
+            nums.forEach(num => {
+                if (num > 0) {
+                    counts++
+                }
+            });
+            return counts;
+        }
+        console.log(countPositive([1, -3, 5]));
+        console.log(countPositive([-2, 3, -5, 7, 10]));
+
+        // create this funtion using .map() instead of a loop.
+        // shortcut version
+        const addNum = (array, num) => array.map(n => n + num);
+
+        console.log(addNum([1, 2, 3], 2));
+        console.log(addNum([-2, -1, 0, 99], 3));
+
+        // non-shortcut version
+        function addNums(array, num) {
+            return array.map(function (n) {
+                return n + num;
+            });
+        }
+        console.log(addNums([1, 2, 3], 2));
+        console.log(addNums([-2, -1, 0, 99], 3));
+
+        // create this functio using .filter() instead of a loop
+        function removeEgg(foods) {
+            return foods.filter(function (item) {
+                return item !== 'egg';
+            });
+        }
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+        // remove first two egg from the array
+        function removeEggs(foods) {
+            let eggCount = 0;
+
+            return foods.filter(function (item) {
+                if (item === 'egg' && eggCount < 2) {
+                    eggCount++;
+                    return false;
+                }
+                return true;
+            });
+        }
+        console.log(removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+    </script>
+</body>
+
+</html>
